@@ -184,6 +184,7 @@ elseif game.PlaceId == 537413528 then
     --Main
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
+    
 
     MainSection:NewButton("AutoFarm", "non stop auto farm", function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/urmomjklol69/GoldFarmBabft/main/GoldFarm.lua'),true))()
@@ -193,5 +194,184 @@ elseif game.PlaceId == 537413528 then
 local PlayerSection = Player:NewSection("SirShadyVI#4296")
 local PlayerSection = Player:NewSection("if it gets patched well fuck")
 local PlayerSection = Player:NewSection("this script only works in build a boat")
-end
+elseif game.PlaceId == 443406476 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("PROJECT LAZARUS", "Midnight")
 
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("PROHUB V1 Project Lazarus")
+    local Player = Window:NewTab("Player")
+    local Player = Player:NewSection("Only works in voting area/Lobby only")
+    local Credits = Window:NewTab("Credits")
+    local Credits = Credits:NewSection("About/discord")
+    
+    MainSection:NewButton("Inf Ammo", "no more reload ez", function()    hookfunction(gcinfo, function()
+        return math.random(200,350)
+     end)
+     
+     -- // Constants \\ --
+     -- [ Services ] --
+     local Services = setmetatable({}, {__index = function(Self, Index)
+        local NewService = game:GetService(Index)
+        if NewService then
+            Self[Index] = NewService
+        end
+        return NewService
+     end})
+     
+     -- [ LocalPlayer ] --
+     local LocalPlayer = Services.Players.LocalPlayer
+     
+     -- // Variables \\ --
+     local Connections = {
+        Weapon1 = nil;
+        Weapon2 = nil;
+        Weapon3 = nil;
+        Backpack = nil;
+     }
+     
+     local RoundNumber = workspace.RoundNum
+     
+     -- // Event Listeners \\ --
+     local function CharacterAdded(Character)
+        local Backpack = LocalPlayer:WaitForChild('Backpack')
+     
+        local function ChildAdded(Child)
+            if Child.Name == "Weapon1" or Child.Name == "Weapon2" or Child.Name == "Weapon3" then
+                local Module = require(Child)
+                
+                if Connections[Child.Name] then
+                    Connections[Child.Name]:Disconnect()
+                    Connections[Child.Name] = nil
+                end
+     
+                Connections[Child.Name] = Services.RunService.RenderStepped:Connect(function()
+                    Module.Ammo = Module.MaxAmmo
+                    Module.StoredAmmo = Module.MaxAmmo  end)
+                end
+            end
+         
+            if Connections.Backpack then
+                Connections.Backpack:Disconnect()
+                Connections.Backpack = nil
+            end
+         
+            for i,v in ipairs(Backpack:GetChildren()) do
+                ChildAdded(v)
+            end
+            Connections.Backpack = Backpack.ChildAdded:Connect(ChildAdded)
+         end
+         
+         LocalPlayer.CharacterAdded:Connect(CharacterAdded)
+         CharacterAdded(LocalPlayer.Character)
+    end)
+    MainSection:NewButton("Kill All/auto farm", "this is non stop LOL", function()  -- Var
+        local Player = game:GetService("Players").LocalPlayer;
+        local remoteKey;
+        
+        -- Main Loop
+        while wait() do
+            -- ik bad method but idc
+            if (Player.Character and Player.Character:FindFirstChild("WeaponScript") and getsenv(Player.Character.WeaponScript).Fire and not remoteKey) then
+                remoteKey = debug.getupvalue(getsenv(Player.Character.WeaponScript).Fire, 15);
+            end;
+            
+            if (remoteKey) then
+                for i, v in next, Workspace.Baddies:GetChildren() do 
+                    if (v.Parent:FindFirstChild("Zombie") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HeadBox") and v.Humanoid:FindFirstChild("Damage")) then
+                        local args = {
+                            ["BodyPart"]    = v.HeadBox;
+                            ["GibPower"]    = 0;
+                            ["Damage"]      = math.huge;
+                        };
+        
+                        v.Humanoid.Damage:FireServer(args, remoteKey);
+                    end;
+                end;
+            end;
+        end;
+        end)
+        
+            
+    MainSection:NewToggle("All Modifications", "Insta kill,inf ammo", function(state)
+        if state then
+            hookfunction(gcinfo, function()
+                return math.random(200,350)
+             end)
+             
+             -- // Constants \\ --
+             -- [ Services ] --
+             local Services = setmetatable({}, {__index = function(Self, Index)
+                local NewService = game:GetService(Index)
+                if NewService then
+                    Self[Index] = NewService
+                end
+                return NewService
+             end})
+             
+             -- [ LocalPlayer ] --
+             local LocalPlayer = Services.Players.LocalPlayer
+             
+             -- // Variables \\ --
+             local Connections = {
+                Weapon1 = nil;
+                Weapon2 = nil;
+                Weapon3 = nil;
+                Backpack = nil;
+             }
+             
+             local RoundNumber = workspace.RoundNum
+             
+             -- // Event Listeners \\ --
+             local function CharacterAdded(Character)
+                local Backpack = LocalPlayer:WaitForChild('Backpack')
+             
+                local function ChildAdded(Child)
+                    if Child.Name == "Weapon1" or Child.Name == "Weapon2" or Child.Name == "Weapon3" then
+                        local Module = require(Child)
+                        
+                        if Connections[Child.Name] then
+                            Connections[Child.Name]:Disconnect()
+                            Connections[Child.Name] = nil
+                        end
+             
+                        Connections[Child.Name] = Services.RunService.RenderStepped:Connect(function()
+                            Module.Ammo = Module.MaxAmmo
+                            Module.StoredAmmo = Module.MaxAmmo
+                            Module.HeadShot = 250 + (RoundNumber.Value * 10)
+                            Module.TorsoShot = 250 + (RoundNumber.Value * 10)
+                            Module.LimbShot = 250 + (RoundNumber.Value * 10)
+                            Module.BulletPenetration = 1000
+                        end)
+                    end
+                end
+             
+                if Connections.Backpack then
+                    Connections.Backpack:Disconnect()
+                    Connections.Backpack = nil
+                end
+             
+                for i,v in ipairs(Backpack:GetChildren()) do
+                    ChildAdded(v)
+                end
+                Connections.Backpack = Backpack.ChildAdded:Connect(ChildAdded)
+             end
+             
+             LocalPlayer.CharacterAdded:Connect(CharacterAdded)
+             CharacterAdded(LocalPlayer.Character)("Toggle On")
+        else
+            print("Toggle Off")
+        end
+    end)
+    Player:NewSlider("Speed", "Speed lol", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    Player:NewSlider("SliderText", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game:GetService("Players").LocalPlayer.Character.Humanoid.JumpHeight = s
+    end)
+    Credits:NewButton("SirShady#4296", "UI Designer", function()    print("Clicked")end)
+    Credits:NewButton("MegamanUPS#0001", "Scripter", function()    print("Clicked")end)
+    Credits:NewButton("KAVO UI MIDNIGHT THEME", "ButtonInfo", function()    print("Clicked")end)
+    Credits:NewButton("Btw Kill all is bannable", "Be Careful:)", function()    print("Clicked")end)    
+end
