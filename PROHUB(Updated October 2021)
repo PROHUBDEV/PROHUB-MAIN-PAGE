@@ -1,5 +1,5 @@
 -- Made By PROHUB DEV
--- supports Build a boat,Tower of hell,Prison Life,Ninja Legends
+-- supports Build a boat,Tower of hell,Prison Life,Ninja Legends,Project Lazarus
 
 if game.PlaceId == 155615604 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
