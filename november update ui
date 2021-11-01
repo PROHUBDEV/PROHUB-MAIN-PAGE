@@ -1,0 +1,245 @@
+-- Venyx UI
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("FallenWare - We Bring you the best Script hubs!", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- page 1
+local page = venyx:addPage("FallenWare", 5012544693)
+local section1 = page:addSection("PROHUB/FallenWare")
+local section2 = page:addSection("Individuals")
+
+--section 1
+
+section1:addButton("FallenWare", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PROHUBDEV/PROHUB-MAIN-PAGE/main/PROHUB(Updated%20October%202021)'))() 
+end)
+ 
+section1:addButton("Old Script Hub", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PROHUBDEV/PROHUB-MAIN-PAGE/main/Script%20hub%20lol%20ez'))()
+end)
+       
+-- section 2
+
+section2:addButton("Easy Access Hub(in development)", function()
+    print("sup")
+    end)
+
+    section2:addButton("CBRO Skin Changer", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/XMqn7vk0'))()
+        end)
+
+        section2:addButton("MegaSploit ESP v1", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/ZzvrU6jN'))()
+            end)
+
+-- page 2
+local page = venyx:addPage("Presets", 5012544693)
+local section1 = page:addSection("Exploit Stuff")
+local section2 = page:addSection("Jump/Speed")
+-- section 1
+
+section1:addButton("Remote Spy", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/PROHUBDEV/PROHUB-MAIN-PAGE/main/not%20mine%20but%20use%20it'))()
+    end)
+    section1:addButton("Dark Dex", function()
+        loadstring(game:HttpGet('https://gist.githubusercontent.com/DinosaurXxX/b757fe011e7e600c0873f967fe427dc2/raw/ee5324771f017073fc30e640323ac2a9b3bfc550/dark%2520dex%2520v4'))()
+        end)
+        section1:addButton("Unnamed Esp", function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))()
+            end)
+            section1:addButton("LoadString Maker GUI", function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/PROHUBDEV/PROHUB-V1-TOWER-OF-HELL/main/loadstring%20maker'))()
+                end)
+        
+
+    --section 2
+    section2:addSlider("Walk Speed", 16, 0, 500, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    section2:addSlider("Jump Power", 50, 0, 500, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    -- page 3
+local page = venyx:addPage("Script Hubs", 5012544693)
+local section1 = page:addSection("Fps Games")
+local section2 = page:addSection("Auto Farms")
+local section3 = page:addSection("Games")
+local section4 = page:addSection("FE Scripts")
+local section5 = page:addSection("More Hubs")
+-- buttons
+
+section1:addButton("Hexagon", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
+    end)
+
+    section1:addButton("Solaris", function()
+        loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+        end)
+
+        section1:addButton("Owl Hub", function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
+
+            section1:addButton("Fps Gui v2.4", function()
+                loadstring(game:HttpGet('https://pastebin.com/raw/BibR7suA'))()
+                end)
+
+                section1:addButton("HexHub", function()
+                    loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
+                        end)
+
+                        section1:addButton("YeetWare", function()
+                            loadstring(game:HttpGet('https://pastebin.com/raw/q0iFWBC4'))()
+                                end)
+
+            -- 2
+
+            section2:addButton("Build a Boat", function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/Build-A-Boat'))()
+                end)
+                section2:addButton("Bloxburg", function()
+                    loadstring(game:HttpGet("https://www.logixism.tech/AlphaX/loader.lua", true))() 
+                    end)
+                section2:addButton("Shindo Life", function()
+                    loadstring(game:HttpGet("https://bruh.keshsenpai.com/.lua"))()
+                    end)
+                    section2:addButton("King Legacy", function()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
+                        end)
+                        section2:addButton("Blox Fruit", function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/StormSKz12/StirkeHub1/main/Gameincluded"))()
+                            end)
+
+                            --3 
+
+                            section3:addButton("BedWars", function()
+                                loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+                                    end)
+
+                                    section3:addButton("VoxelCraft", function()
+                                        loadstring(game:HttpGet("https://raw.githubusercontent.com/inceldom/uwu/main/furaffinityv2",true))()
+                                            end)
+
+                                            section3:addButton("BedWars", function()
+                                                loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+                                                    end)
+
+                                                    section3:addButton("Arsenal", function()
+                                                        loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/V3.lua"))()
+                                                            end)
+                                                            
+                                                            section3:addButton("Counter Blox", function()
+                                                                loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
+                                                                    end)
+                                
+
+                            -- 4
+                            section4:addButton("Infinite Yield", function()
+                                loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+                                end)
+
+                                --5
+                                section5:addButton("Ez Hub", function()
+                                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+                                end)
+
+                                      section5:addButton("Aurora", function()
+                                            loadstring(game:HttpGet('https://raw.githubusercontent.com/creamjngg/ScriptHub1/main/AuroraFree', true))()
+                                            end)
+
+                                            section5:addButton("Alpha X", function()
+                                                loadstring(game:HttpGet("https://www.logixism.tech/AlphaX/loader.lua", true))() 
+                                                end)
+
+                                            
+                                        
+                                        -- page 4 creds about
+
+                                        local page = venyx:addPage("About us", 5012544693)
+                                        local section1 = page:addSection("Creds")
+                                        local section2 = page:addSection("About")
+
+                                        -- creds
+                                        section1:addButton("SirShadyVI#4296", function()
+                                            game.StarterGui:SetCore("SendNotification", {
+                                                Title = "SirShadyVI#4296";
+                                                Text = "Scripter/UI/Discord Bot dev";
+                                                Duration = "3";
+                                                Button1 = "Ok!";
+                                            })
+                                        end)
+                                        section1:addButton("khia_n#5231", function()
+                                            game.StarterGui:SetCore("SendNotification", {
+                                                Title = "khia_n#5231";
+                                                Text = "Website/Executer dev";
+                                                Duration = "3";
+                                                Button1 = "Ok!";
+                                            })
+                                        end)
+                                        section1:addButton("MegamanUPS#0001", function()
+                                            game.StarterGui:SetCore("SendNotification", {
+                                                Title = "MegamanUPS#0001";
+                                                Text = "Scripter";
+                                                Duration = "3";
+                                                Button1 = "Ok!";
+                                            })
+                                        end)
+                                        section1:addButton("beluga jr#6809", function()
+                                            game.StarterGui:SetCore("SendNotification", {
+                                                Title = "beluga jr#6809";
+                                                Text = "Website/Discord Bot dev";
+                                                Duration = "3";
+                                                Button1 = "Ok!";
+                                            })
+                                        end)
+                                        section1:addButton("Melon#9982", function()
+                                            game.StarterGui:SetCore("SendNotification", {
+                                                Title = "Melon#9982";
+                                                Text = "Discord Bot dev";
+                                                Duration = "3";
+                                                Button1 = "Ok!";
+                                            })
+                                        end)
+                                        -- sec 2 last
+
+                                        section2:addButton("Last updated 11/1/2021", function()
+                                            print("TY FOR USING FALLENWARE")
+                                            end)
+
+                                        section2:addButton("https://discord.gg/frSNFqSBw6", function()
+                                            print("hi")
+                                            end)
+
+                                            
+
+-- Theme Page
+local theme = venyx:addPage("Settings", 5012544693)
+local colors = theme:addSection("Colors")
+local colors2 = theme:addSection("Keybind UI")
+
+for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
+colors:addColorPicker(theme, color, function(color3)
+venyx:setTheme(theme, color3)
+end)
+end
+
+colors2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+    print("Activated Keybind")
+    venyx:toggle()
+    end, function()
+    print("Changed Keybind")
+    end)
+
+
+-- load
+venyx:SelectPage(venyx.pages[1], true)
