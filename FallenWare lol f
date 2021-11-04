@@ -29,7 +29,7 @@ end)
        
 -- section 2
 
-section2:addButton("Easy Access Hub(in development)", function()
+section2:addButton("Easy access hub(in development)", function()
     print("sup")
     end)
 
@@ -56,6 +56,9 @@ section1:addButton("Remote Spy", function()
         section1:addButton("Unnamed Esp", function()
             loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))()
             end)
+            section1:addButton("Fates esp", function()
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
+                end)
             section1:addButton("LoadString Maker GUI", function()
                 loadstring(game:HttpGet('https://raw.githubusercontent.com/PROHUBDEV/PROHUB-V1-TOWER-OF-HELL/main/loadstring%20maker'))()
                 end)
@@ -97,6 +100,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                 section1:addButton("HexHub", function()
                     loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
                         end)
+
+                        section1:addButton("Unnamed Cheat", function()
+                            loadstring(game:HttpGet("https://raw.githubusercontent.com/mrgunz/S/main/Unnamed_Cheat"))()
+                                end)
 
                         section1:addButton("YeetWare", function()
                             loadstring(game:HttpGet('https://pastebin.com/raw/q0iFWBC4'))()
@@ -141,6 +148,10 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                                             section3:addButton("Counter Blox", function()
                                                                 loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
                                                                     end)
+
+                                                                    section3:addButton("Counter Blox Modded", function()
+                                                                        loadstring(game:HttpGet("https://raw.githubusercontent.com/mrgunz/S/main/Unnamed_Cheat"))()
+                                                                            end)
                                 
 
                             -- 4
@@ -174,7 +185,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "SirShadyVI#4296";
                                                 Text = "Scripter/UI/Discord Bot dev";
-                                                Duration = "3";
+                                                Duration = "2";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -182,7 +193,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "khia_n#5231";
                                                 Text = "Website/Executer dev";
-                                                Duration = "3";
+                                                Duration = "2";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -190,7 +201,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "MegamanUPS#0001";
                                                 Text = "Scripter";
-                                                Duration = "3";
+                                                Duration = "2";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -198,7 +209,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "beluga jr#6809";
                                                 Text = "Website/Discord Bot dev";
-                                                Duration = "3";
+                                                Duration = "2";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -206,25 +217,25 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "Melon#9982";
                                                 Text = "Discord Bot dev";
-                                                Duration = "3";
+                                                Duration = "2";
                                                 Button1 = "Ok!";
                                             })
                                         end)
                                         -- sec 2 last
 
-                                        section2:addButton("Last updated 11/1/2021", function()
+                                        section2:addButton("Last updated 11/4/2021", function()
                                             print("TY FOR USING FALLENWARE")
                                             end)
 
                                         section2:addButton("https://discord.gg/frSNFqSBw6", function()
-                                            print("hi")
+                                            print("https://discord.gg/frSNFqSBw6")
                                             end)
 
                                             
 
 -- Theme Page
 local theme = venyx:addPage("Settings", 5012544693)
-local colors = theme:addSection("Colors")
+local colors = theme:addSection("UI Theme")
 local colors2 = theme:addSection("Keybind UI")
 
 for theme, color in pairs(themes) do -- all in one theme changer, i know, im cool
@@ -233,7 +244,7 @@ venyx:setTheme(theme, color3)
 end)
 end
 
-colors2:addKeybind("Toggle Keybind", Enum.KeyCode.One, function()
+colors2:addKeybind("Toggle Keybind", Enum.KeyCode.KeypadOne, function()
     print("Activated Keybind")
     venyx:toggle()
     end, function()
