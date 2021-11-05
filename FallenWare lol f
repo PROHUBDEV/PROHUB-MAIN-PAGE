@@ -101,6 +101,20 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                     loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
                         end)
 
+                        section1:addButton("PikaWare", function()
+                            local _gamelists = {
+                                Cbro = 301549746,
+                                Mortem = 4169490976,
+                                Arsenal = 286090429
+                            }
+                            
+                            for i,v in pairs(_gamelists) do
+                              if game.PlaceId == v then
+                                 loadstring(game:HttpGet("https://raw.githubusercontent.com/CatzCode/PikaHub/main/Hentai/" .. i .. ".lua"))()
+                              end
+                            end
+                                end)
+
                         section1:addButton("Unnamed Cheat", function()
                             loadstring(game:HttpGet("https://raw.githubusercontent.com/mrgunz/S/main/Unnamed_Cheat"))()
                                 end)
@@ -146,7 +160,17 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                                             end)
                                                             
                                                             section3:addButton("Counter Blox", function()
-                                                                loadstring(game:HttpGet('https://raw.githubusercontent.com/venosu/Hex-Hub/main/hexhub.lua'))()
+                                                                local _gamelists = {
+                                                                    Cbro = 301549746,
+                                                                    Mortem = 4169490976,
+                                                                    Arsenal = 286090429
+                                                                }
+                                                                
+                                                                for i,v in pairs(_gamelists) do
+                                                                  if game.PlaceId == v then
+                                                                     loadstring(game:HttpGet("https://raw.githubusercontent.com/CatzCode/PikaHub/main/Hentai/" .. i .. ".lua"))()
+                                                                  end
+                                                                end
                                                                     end)
 
                                                                     section3:addButton("Counter Blox Modded", function()
@@ -185,7 +209,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "SirShadyVI#4296";
                                                 Text = "Scripter/UI/Discord Bot dev";
-                                                Duration = "2";
+                                                Duration = "4";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -193,7 +217,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "khia_n#5231";
                                                 Text = "Website/Executer dev";
-                                                Duration = "2";
+                                                Duration = "3";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -201,7 +225,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "MegamanUPS#0001";
                                                 Text = "Scripter";
-                                                Duration = "2";
+                                                Duration = "3";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -209,7 +233,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "beluga jr#6809";
                                                 Text = "Website/Discord Bot dev";
-                                                Duration = "2";
+                                                Duration = "3";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -217,7 +241,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "Melon#9982";
                                                 Text = "Discord Bot dev";
-                                                Duration = "2";
+                                                Duration = "3";
                                                 Button1 = "Ok!";
                                             })
                                         end)
@@ -244,7 +268,7 @@ venyx:setTheme(theme, color3)
 end)
 end
 
-colors2:addKeybind("Toggle Keybind", Enum.KeyCode.KeypadOne, function()
+colors2:addKeybind("Toggle Keybind", Enum.KeyCode.L, function()
     print("Activated Keybind")
     venyx:toggle()
     end, function()
