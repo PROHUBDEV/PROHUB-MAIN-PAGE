@@ -247,7 +247,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main
                                         end)
                                         -- sec 2 last
 
-                                        section2:addButton("Last updated 11/4/2021", function()
+                                        section2:addButton("Last updated 11/5/2021", function()
                                             print("TY FOR USING FALLENWARE")
                                             end)
 
